@@ -1,24 +1,18 @@
-function takeANumber(line, name){
-  line.push(name);
+var i = 0;
+
+function takeANumber(line){
+  i++;
+  line.push(i);
+  
   var numberInLine = line.length;
-  var message = "Welcome, " + name + ". You are number " +numberInLine + " in line.";
-  // if(numberInLine == 1){
-  //   message += "1st in line.";
-  // }
-  // if(numberInLine == 2){
-  //   message += "2nd in line.";
-  // } 
-  // if(numberInLine == 3){
-  //   message += "3rd in line.";
-  // }
-  // if(numberInLine > 3){
-  //   message += numberInLine+ "th in line.";
-  // }
+  
+  var message = "Welcome!" + " You are number " + i + " in line.";
+  
   return message
 }
 
 function nowServing(katzDeliLine){
-  if(katzDeliLine.length== 0){
+  if(katzDeliLine.length == 0){
     return "There is nobody waiting to be served!"
   }else{
     var name = katzDeliLine[0];
